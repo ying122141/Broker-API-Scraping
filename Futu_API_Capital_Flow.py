@@ -88,7 +88,6 @@ def driverThread(mainScheduler, session):
     
     global tableName, samplingRate
 
-    # ---Check whether today is trading day from API call---
     today = session.today
 
     ret, data = quote_ctx.request_trading_days(TradeDateMarket.HK, start = today, end = today)
