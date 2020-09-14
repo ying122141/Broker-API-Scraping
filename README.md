@@ -1,5 +1,8 @@
 # Broker-API-Scraping
 
+**Futu API software Download**: https://www.futunn.com/download/OpenAPI
+
+**Futu API Documemtation**: https://futunnopen.github.io/futu-api-doc/intro/intro.html
 
 This script aims to collect the minutely capital flow of stocks from Futu API.
 
@@ -9,6 +12,3 @@ For the list of target stocks, users can input up to 30 stock numbers in StockLi
 
 To connect the broker API, the user needs to install Futu API software. 
 
-Futu API software Download: https://www.futunn.com/download/OpenAPI
-
-Futu API Documemtation: https://futunnopen.github.io/futu-api-doc/intro/intro.html
