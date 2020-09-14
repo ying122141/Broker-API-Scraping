@@ -2,7 +2,7 @@
 
 **Futu API software Download**: https://www.futunn.com/download/OpenAPI
 
-**Futu API Documemtation**: https://futunnopen.github.io/futu-api-doc/intro/intro.html
+**Futu API Documentation**: https://futunnopen.github.io/futu-api-doc/intro/intro.html
 
 This script aims to collect the minutely capital flow of stocks from Futu API.
 
