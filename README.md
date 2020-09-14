@@ -4,7 +4,7 @@
 
 **Futu API Documentation**: https://futunnopen.github.io/futu-api-doc/intro/intro.html
 
-This script aims to collect the minutely capital flow of stocks from Futu API.
+This script aims to collect the minutely capital flow of stocks from Futu API with Python script.
 
 Since the broker API does not provide the historical capital flow, this script would retrieve the data from the live stream and insert the data into MongoDB.
 
