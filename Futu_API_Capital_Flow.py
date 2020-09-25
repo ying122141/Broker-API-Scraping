@@ -31,13 +31,13 @@ class sessionTime:
         self.ed_h = ed_h
         self.ed_m = ed_m
         self.ed_s = ed_s
-        self.today = datetime.today().strftime('%Y-%m-%d')
+        
 
-    def sessionStart(self):
-        return self.today + " " + self.st_h + ":" + self.st_m + ":" + self.st_s
+    def sessionStart(self, today):
+        return today + " " + self.st_h + ":" + self.st_m + ":" + self.st_s
     
-    def sessionEnd(self):
-        return self.today + " " + self.ed_h + ":" + self.ed_m + ":" + self.ed_s
+    def sessionEnd(self, today):
+        return today + " " + self.ed_h + ":" + self.ed_m + ":" + self.ed_s
 
 
 # ---Formation of log Message---
@@ -88,7 +88,7 @@ def driverThread(mainScheduler, session):
     
     global tableName, samplingRate
 
-    today = session.today
+    today = datetime.today().strftime('%Y-%m-%d')
 
     ret, data = quote_ctx.request_trading_days(TradeDateMarket.HK, start = today, end = today)
     
@@ -123,7 +123,7 @@ def driverThread(mainScheduler, session):
             return None
 
         # ---Start to scrape the data---
-        mainScheduler.add_job(distFlow, trigger = 'interval', args = [quote_ctx, client, session.ed_h], seconds = samplingRate, start_date = session.sessionStart(), end_date = session.sessionEnd() )
+        mainScheduler.add_job(distFlow, trigger = 'interval', args = [quote_ctx, client, session.ed_h], seconds = samplingRate, start_date = session.sessionStart(today), end_date = session.sessionEnd(today) )
     
 
     # ---If the API call is unsuccessful, 
